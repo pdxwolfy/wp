@@ -4,7 +4,10 @@
   "description": "webpack-test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "del-cli dist -f",
+    "build": "webpack src/main.js --output dist/bundle.js",
+    "execute": "node dist/bundle.js",
+    "start": "npm run build -s && npm run execute -s"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,9 @@
   },
   "homepage": "https://github.com/pdxwolfy/wp#readme",
   "devDependencies": {
-    "webpack": "^4.30.0"
+    "del-cli": "^1.1.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
   },
   "dependencies": {
     "lodash": "^4.17.11"
