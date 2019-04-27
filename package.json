@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pdxwolfy/wp/issues"
   },
-  "homepage": "https://github.com/pdxwolfy/wp#readme"
+  "homepage": "https://github.com/pdxwolfy/wp#readme",
+  "devDependencies": {
+    "webpack": "^4.30.0"
+  }
 }
