@@ -1,7 +1,5 @@
-const map = require('lodash/map');
+import { map } from 'lodash';
+import template from './numberlist.hbs';
 
-function square(number) {
-    return number * number;
-}
-
-console.log(map([1, 2, 3, 4, 5, 6], square));
+let numbers = map([1,2,3,4,5,6], (number) => number * number);
+console.log(template({numbers}));
